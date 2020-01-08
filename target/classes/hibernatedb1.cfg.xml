@@ -8,7 +8,7 @@
         <property name="hibernate.connection.username">hassan</property>
         <property name="hibernate.connection.password">43192431</property>
         <property name="hibernate.connection.url">
-            jdbc:mysql://localhost/homework10?createDatabaseIfNotExist=true
+            jdbc:mysql://localhost/homework10dbone?createDatabaseIfNotExist=true
         </property>
         <property name="hibernate.hbm2ddl.auto">update</property>
 

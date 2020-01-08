@@ -1,19 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9b79fbd1-2228-4cbe-bf5d-a45605ce4067" name="Default Changelist" comment="" />
+    <list default="true" id="9b79fbd1-2228-4cbe-bf5d-a45605ce4067" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/entities/db1/embeddables/About.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/entities/db1/embeddables/Date.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/entities/db1/enums/IsPublished.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/entities/db1/enums/RoleType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/entities/db2/UserInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/impl/EditArticleImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/impl/EnterNewArticleImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/impl/SeeArticlesByUserIdImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/usermanagement/impl/ChangePasswordImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/usermanagement/impl/DashboardImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/repositories/db2/UserInfoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernatedb2.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework10.iml" beforeDir="false" afterPath="$PROJECT_DIR$/homework10.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/config/CrudRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/config/CrudRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/config/HibernateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/config/HibernateUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/entities/db1/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/entities/db1/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/entities/db1/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/entities/db1/Article.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/entities/db1/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/entities/db1/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/entities/db1/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/entities/db1/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/entities/db1/Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/entities/db1/Tag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/entities/db1/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/entities/db1/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecase/EditArticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecase/EditArticle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecase/EnterNewArticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecase/EnterNewArticle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecase/SeeArticlesByUserId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecase/SeeArticlesByUserId.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/features/usermanagement/usecase/ChangePassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/usermanagement/usecase/ChangePassword.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/features/usermanagement/usecase/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/usermanagement/usecase/Dashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/repositories/db1/ArticleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/repositories/db1/ArticleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/repositories/db1/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/repositories/db1/CategoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/repositories/db1/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/repositories/db1/RoleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/repositories/db1/TagRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/repositories/db1/TagRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/repositories/db1/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/repositories/db1/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/share/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/share/AuthenticationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernatedb1.cfg.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="homework10dbone@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="homework10dbone@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="homework10dbone@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="homework10dbone: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="homework10dbtwo@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="homework10dbtwo@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="homework10dbtwo@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="homework10dbtwo: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="homework10dbtwo@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="homework10dbtwo: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="userinfo: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -23,11 +120,14 @@
     </option>
   </component>
   <component name="ProjectId" id="1W7OGsM6SfWbqPpgMTaO7Z3eaMV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Facets" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
@@ -43,6 +143,59 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="Application.Application">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ir.maktab.Application" />
+      <module name="homework10" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ir.maktab.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CreateRolesAndUser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ir.maktab.CreateRolesAndUser" />
+      <module name="homework10" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ir.maktab.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Application" />
+        <item itemvalue="Application.CreateRolesAndUser" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@b0fef8fc" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@c22cd399" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+          </expand>
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -53,11 +206,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1578497073194</updated>
-      <workItem from="1578497077764" duration="1770000" />
+      <workItem from="1578497077764" duration="5339000" />
+      <workItem from="1578510908606" duration="5865000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
