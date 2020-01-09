@@ -13,10 +13,7 @@
         <property name="hibernate.hbm2ddl.auto">update</property>
 
         <mapping class="ir.maktab.entities.db1.User"/>
-        <mapping class="ir.maktab.entities.db1.Article"/>
-        <mapping class="ir.maktab.entities.db1.Category"/>
         <mapping class="ir.maktab.entities.db1.Role"/>
-        <mapping class="ir.maktab.entities.db1.Tag"/>
         <mapping class="ir.maktab.entities.db1.Address"/>
     </session-factory>
 </hibernate-configuration>

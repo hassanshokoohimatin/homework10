@@ -1,8 +1,8 @@
-package ir.maktab.repositories.db1;
+package ir.maktab.repositories.db2;
 
 import ir.maktab.config.CrudRepository;
 import ir.maktab.config.HibernateUtil;
-import ir.maktab.entities.db1.Article;
+import ir.maktab.entities.db2.Article;
 import org.hibernate.Session;
 
 public class ArticleRepository extends CrudRepository<Article, Long> {
@@ -20,5 +20,5 @@ public class ArticleRepository extends CrudRepository<Article, Long> {
     protected Class<Article> getEntityClass() {
         return Article.class;
     }
-    protected Session getSession(){ return HibernateUtil.getSessionOne(); }
+    protected Session getSession(){ return HibernateUtil.getSessionTwo(); }
 }

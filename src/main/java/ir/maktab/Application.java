@@ -3,7 +3,7 @@ package ir.maktab;
 import ir.maktab.entities.db1.*;
 import ir.maktab.entities.db1.enums.IsPublished;
 import ir.maktab.entities.db1.enums.RoleType;
-import ir.maktab.entities.db2.UserInfo;
+import ir.maktab.entities.db2.*;
 import ir.maktab.features.articlemanagement.impl.EditArticleImpl;
 import ir.maktab.features.articlemanagement.impl.EnterNewArticleImpl;
 import ir.maktab.features.articlemanagement.impl.SeeArticlesByUserIdImpl;
@@ -15,12 +15,15 @@ import ir.maktab.features.usermanagement.impl.DashboardImpl;
 import ir.maktab.features.usermanagement.usecase.ChangePassword;
 import ir.maktab.features.usermanagement.usecase.Dashboard;
 import ir.maktab.repositories.db1.*;
-import ir.maktab.repositories.db2.UserInfoRepository;
+import ir.maktab.repositories.db2.*;
 import ir.maktab.share.AuthenticationService;
+import ir.maktab.share.UserInfo;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class Application {
@@ -29,16 +32,17 @@ public class Application {
     static CategoryRepository categoryRepository = CategoryRepository.getInstance();
     static TagRepository tagRepository = TagRepository.getInstance();
     static RoleRepository roleRepository = RoleRepository.getInstance();
-    static UserInfoRepository userInfoRepository = UserInfoRepository.getInstance();
 
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
         String manner = "";
         while ( ! manner.equals("exit")){
-            System.out.println("Signin\nSignup\narticles\nexit\n");
+            System.out.println("Signin\nSignup\nArticles\n(Find1)...Find an optional city users" +
+                    "(using a generic method with a Predicate argument)\n" +
+                    "(Find2)...See published articles...(using a generic method)Exit\n");
             manner = scanner.next();
-            if (manner.equals("signup")){
+            if (manner.equalsIgnoreCase("signup")){
 
 
                 User loginUser = AuthenticationService.getInstance().getLoginUser();
@@ -72,17 +76,10 @@ public class Application {
                         System.out.println("Postal code : ");
                         String postalCode = scanner.next();
                         Address address = new Address(null,state,city,street,alley,postalCode,null);
-                        User user = new User(null, username, nationalCode, birthday, nationalCode,null,address,roleList);
+                        User user = new User(null, username, nationalCode, birthday, nationalCode,address,roleList);
                         address.setUser(user);
                         userRepository.save(user);
                         System.out.println("signed up successfully...you can sign in now as a writer");
-                        System.out.println("Some extra information...");
-                        System.out.println("Enter first name : ");
-                        String firstName = scanner.next();
-                        System.out.println("Enter last name : ");
-                        String lastName = scanner.next();
-                        UserInfo userInfo = new UserInfo(null,firstName,lastName,RoleType.Writer,address.getCity(),user.getId());
-                        userInfoRepository.save(userInfo);
                     } else {
                         System.out.println("This username or password already exist...try another");
                     }
@@ -93,7 +90,7 @@ public class Application {
                     System.out.println("signed out successfully...");
                 }
             }
-            if(manner.equals("articles")){
+            if(manner.equalsIgnoreCase("articles")){
 
                 List<Article> articles = articleRepository.findAll();
 
@@ -114,10 +111,10 @@ public class Application {
                     }
                 }
             }
-            if (manner.equals("exit")){
+            if (manner.equalsIgnoreCase("exit")){
                 System.out.println("END");
             }
-            if (manner.equals("signin")){
+            if (manner.equalsIgnoreCase("signin")){
                 User loginUser = AuthenticationService.getInstance().getLoginUser();
                 if (loginUser == null) {
                     System.out.println("Enter username : ");
@@ -137,11 +134,27 @@ public class Application {
                         System.out.println("Wrong username or password...");
                     } else {
                         //After successful sign in
+                        System.out.println("Your first name : ");
+                        String firstName = scanner.next();
+                        System.out.println("Your last name : ");
+                        String lastName = scanner.next();
+                        String fullName = firstName+" "+lastName;
+                        UserInfo userInfo = new UserInfo(fullName);
                         if (loginUser.getRoles().size()==1){
-                            if (loginUser.getRoles().get(0).getRoleType().equals(RoleType.Admin)){ admin(loginUser); }
-                            else{ writer(loginUser); }
+                            if (loginUser.getRoles().get(0).getRoleType().equals(RoleType.Admin)){
+                                userInfo.setRoleType(RoleType.Admin);
+                                admin(loginUser , userInfo);
+                            }
+
+                            else{
+                                userInfo.setRoleType(RoleType.Writer);
+                                writer(loginUser,userInfo);
+                            }
                         }
-                        else{ adminWriter(loginUser); }
+                        else{
+                            userInfo.setRoleType(RoleType.AdminWriter);
+                            adminWriter(loginUser , userInfo);
+                        }
                     }
                 }else
                 {
@@ -150,10 +163,35 @@ public class Application {
                     System.out.println("signed out successfully...");
                 }
             }
+
+            if (manner.equalsIgnoreCase("find1")){
+                System.out.println("Which city do you want its users?...enter city...");
+                String city = scanner.next();
+                Predicate<User> predicate = user -> user.getAddress().getCity().equals(city);
+                List<User> users = userRepository.findAll(predicate);
+                if (users.size()==0)
+                    System.out.println("There is no any users from this city...");
+                else{
+                    for (User u : users)
+                        System.out.println(u);
+                }
+            }
+
+            if (manner.equalsIgnoreCase("find2")){
+                System.out.println("Published articles...\n");
+                Predicate<Article> predicate = article -> article.getIsPublished().equals(IsPublished.Yes);
+                List<Article> articles = articleRepository.findAll(predicate);
+                if (articles.size()==0)
+                    System.out.println("There is no any published articles...");
+                else{
+                    for (Article a : articles)
+                        System.out.println(a);
+                }
+            }
         }
     }
 
-    public static void adminWriter(User user){
+    public static void adminWriter(User user , UserInfo userInfo){
         Scanner scanner = new Scanner(System.in);
         int command = 0;
         while(command!=13) {
@@ -168,7 +206,7 @@ public class Application {
             }
             if (command==2){
                 articleRepository.findAll().stream().
-                        filter(Article->Article.getIsPublished().equals("no")).
+                        filter(Article->Article.getIsPublished().equals(IsPublished.No)).
                         forEach(Article-> System.out.println(Article));
 
                 System.out.print("Which article do you want to publish?\nEnter id : ");
@@ -179,7 +217,7 @@ public class Application {
             }
             if (command==3){
                 articleRepository.findAll().stream().
-                        filter(Article->Article.getIsPublished().equals("yes")).
+                        filter(Article->Article.getIsPublished().equals(IsPublished.Yes)).
                         forEach(Article-> System.out.println(Article));
 
                 System.out.print("Which article do you want to publish off?\nEnter the id : ");
@@ -238,11 +276,6 @@ public class Application {
                     roles.add(role2);
                     selectUser.setRoles(roles);
                     userRepository.update(selectUser);
-                    UserInfo userInfo = userInfoRepository.findAll().stream().
-                            filter(UserInfo->UserInfo.getUserId()==id).
-                            collect(Collectors.toList()).get(0);
-                    userInfo.setRoleType(RoleType.AdminWriter);
-                    userInfoRepository.update(userInfo);
                 }
                 if (choice==2){
                     userRepository.findAll().stream().
@@ -260,11 +293,6 @@ public class Application {
                     roles.add(role2);
                     selectUser.setRoles(roles);
                     userRepository.update(selectUser);
-                    UserInfo userInfo = userInfoRepository.findAll().stream().
-                            filter(UserInfo->UserInfo.getUserId()==id).
-                            collect(Collectors.toList()).get(0);
-                    userInfo.setRoleType(RoleType.AdminWriter);
-                    userInfoRepository.update(userInfo);
                 }
 
             }
@@ -275,19 +303,19 @@ public class Application {
             if (command==9){
 
                 SeeArticlesByUserId seeArticlesByUserId = new SeeArticlesByUserIdImpl();
-                seeArticlesByUserId.listArticles(user);
+                seeArticlesByUserId.listArticles(userInfo);
             }
             if (command==10){
                 EnterNewArticle enterNewArticle = new EnterNewArticleImpl();
-                enterNewArticle.createArticle(user);
+                enterNewArticle.createArticle(userInfo);
             }
             if (command==11){
                 EditArticle editArticle = new EditArticleImpl();
-                editArticle.editArticle(user);
+                editArticle.editArticle(userInfo);
             }
             if (command==12){
                 Dashboard dashboard = new DashboardImpl();
-                dashboard.dashboard(user);
+                dashboard.dashboard(userInfo);
             }
 
             if (command==13){
@@ -297,7 +325,7 @@ public class Application {
         }
 
     }
-    public static void admin(User user){
+    public static void admin(User user , UserInfo userInfo){
 
         Scanner scanner = new Scanner(System.in);
         int command = 0;
@@ -378,12 +406,6 @@ public class Application {
                 roles.add(role2);
                 selectUser.setRoles(roles);
                 userRepository.update(selectUser);
-                UserInfo userInfo = userInfoRepository.findAll().stream().
-                        filter(UserInfo->UserInfo.getUserId()==id).
-                        collect(Collectors.toList()).get(0);
-                userInfo.setRoleType(RoleType.AdminWriter);
-                userInfoRepository.update(userInfo);
-
             }
             if (command==8){
                 ChangePassword changePassword = new ChangePasswordImpl();
@@ -396,7 +418,7 @@ public class Application {
         }
 
     }
-    public static void writer(User user){
+    public static void writer(User user , UserInfo userInfo){
         Scanner scanner = new Scanner(System.in);
         int command = 0;
         while(command!=6){
@@ -406,19 +428,19 @@ public class Application {
             command = scanner.nextInt();
             if (command == 1){
                 SeeArticlesByUserId seeArticlesByUserId = new SeeArticlesByUserIdImpl();
-                seeArticlesByUserId.listArticles(user);
+                seeArticlesByUserId.listArticles(userInfo);
             }
 
 
             if (command == 2){
                 EnterNewArticle enterNewArticle = new EnterNewArticleImpl();
-                enterNewArticle.createArticle(user);
+                enterNewArticle.createArticle(userInfo);
             }
 
 
             if (command == 3){
                 EditArticle editArticle = new EditArticleImpl();
-                editArticle.editArticle(user);
+                editArticle.editArticle(userInfo);
             }
 
 
@@ -430,7 +452,7 @@ public class Application {
 
             if (command == 5){
                 Dashboard dashboard = new DashboardImpl();
-                dashboard.dashboard(user);
+                dashboard.dashboard(userInfo);
             }
             if (command == 6){
                 AuthenticationService.getInstance().setLoginUser(null);

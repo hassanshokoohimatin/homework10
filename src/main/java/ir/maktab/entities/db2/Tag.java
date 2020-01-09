@@ -1,4 +1,4 @@
-package ir.maktab.entities.db1;
+package ir.maktab.entities.db2;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

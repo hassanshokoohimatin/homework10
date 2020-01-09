@@ -1,4 +1,4 @@
-package ir.maktab.entities.db1;
+package ir.maktab.entities.db2;
 
 
 import ir.maktab.entities.db1.embeddables.About;
@@ -35,8 +35,7 @@ public class Article {
     @Enumerated(EnumType.STRING)
     private IsPublished isPublished;
 
-    @ManyToOne
-    private User user;
+    private String author;
 
     @ManyToOne
     private Category category;
@@ -61,7 +60,7 @@ public class Article {
                         ", createDate : " + date.getCreateDate() +
                         ", publishDate : " + date.getPublishDate() +
                         ", isPublished : " + isPublished +
-                        ", user=" + user.getUsername() +
+                        ", author=" + author +
                         ", category=" + category.getTitle() +
                         '}';
     }

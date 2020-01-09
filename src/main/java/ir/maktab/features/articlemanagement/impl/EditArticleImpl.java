@@ -1,14 +1,15 @@
 package ir.maktab.features.articlemanagement.impl;
 
-import ir.maktab.entities.db1.Article;
-import ir.maktab.entities.db1.Category;
-import ir.maktab.entities.db1.Tag;
 import ir.maktab.entities.db1.User;
 import ir.maktab.entities.db1.embeddables.About;
+import ir.maktab.entities.db2.Article;
+import ir.maktab.entities.db2.Category;
+import ir.maktab.entities.db2.Tag;
 import ir.maktab.features.articlemanagement.usecase.EditArticle;
-import ir.maktab.repositories.db1.ArticleRepository;
-import ir.maktab.repositories.db1.CategoryRepository;
-import ir.maktab.repositories.db1.TagRepository;
+import ir.maktab.repositories.db2.ArticleRepository;
+import ir.maktab.repositories.db2.CategoryRepository;
+import ir.maktab.repositories.db2.TagRepository;
+import ir.maktab.share.UserInfo;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -23,12 +24,12 @@ public class EditArticleImpl implements EditArticle {
     static TagRepository tagRepository = TagRepository.getInstance();
 
     @Override
-    public void editArticle(User user) {
+    public void editArticle(UserInfo userInfo) {
         Scanner scanner = new Scanner(System.in);
         List<Article> articles = null;
         try {
             articles = articleRepository.findAll().stream().
-                    filter(Article -> Article.getUser().getId() == user.getId()).
+                    filter(Article -> Article.getAuthor().equals(userInfo.getFullName())).
                     collect(Collectors.toList());
         }catch (Exception e){}
 

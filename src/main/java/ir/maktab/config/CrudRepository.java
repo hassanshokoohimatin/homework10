@@ -4,7 +4,10 @@ import org.hibernate.Session;
 import org.hibernate.query.Query;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Function;
+import java.util.function.Predicate;
 
 public abstract class CrudRepository<Entity , ID extends Serializable> {
 
@@ -65,5 +68,21 @@ public abstract class CrudRepository<Entity , ID extends Serializable> {
         List<Entity> entities = query.list();
         getSession().getTransaction().commit();
         return entities;
+    }
+
+    //Generic method with a predicate argument
+    public List<Entity> findAll(Predicate<Entity> predicate){
+        List<Entity> list = new ArrayList<>();
+        List<Entity> entities = findAll();
+        entities.stream().filter(predicate).forEach(entity -> list.add(entity));
+        return list;
+    }
+
+    //Generic method with a function argument
+    public <T> List<T> findAll(Function<Entity , T> function){
+        List<T> list = new ArrayList<>();
+        List<Entity> entities = findAll();
+        entities.stream().map(function).forEach(t->list.add(t));
+        return list;
     }
 }

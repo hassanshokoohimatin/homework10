@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="homework10dbone@localhost" uuid="2f365a20-293e-4028-840b-8ec54573f5b5">
+    <data-source source="LOCAL" name="homework10dbone@localhost" uuid="da7480ee-8416-48e1-9940-5b39c469171b">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
@@ -15,7 +15,7 @@
         <property name="yearIsDateType" value="false" />
       </driver-properties>
     </data-source>
-    <data-source source="LOCAL" name="homework10dbtwo@localhost" uuid="428721fd-bbc5-4dbc-818a-9f27f8b3a70d">
+    <data-source source="LOCAL" name="homework10dbtwo@localhost" uuid="73baa021-af56-4bca-8a27-ef45de142a52">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>

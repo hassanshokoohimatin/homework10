@@ -1,41 +1,33 @@
-package ir.maktab.entities.db2;
+package ir.maktab.share;
 
 
-import ir.maktab.entities.db1.Role;
 import ir.maktab.entities.db1.enums.RoleType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
-import java.util.List;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table
-@Entity
-
 public class UserInfo {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
     private Long id;
 
-    @Column
     private String firstName;
 
-    @Column
     private String lastName;
 
+    private String fullName = firstName+" " +lastName;
+
     @Enumerated(EnumType.STRING)
-    @Column
     private RoleType roleType;
 
-    @Column
     private String city;
 
-    @Column
-    private Long userId;
+    public UserInfo(String fullName) {
+        this.fullName = fullName;
+    }
 }

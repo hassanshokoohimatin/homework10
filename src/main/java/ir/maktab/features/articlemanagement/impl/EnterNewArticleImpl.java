@@ -1,16 +1,18 @@
 package ir.maktab.features.articlemanagement.impl;
 
-import ir.maktab.entities.db1.Article;
-import ir.maktab.entities.db1.Category;
-import ir.maktab.entities.db1.Tag;
 import ir.maktab.entities.db1.User;
 import ir.maktab.entities.db1.embeddables.About;
 import ir.maktab.entities.db1.embeddables.Date;
 import ir.maktab.entities.db1.enums.IsPublished;
+import ir.maktab.entities.db1.enums.RoleType;
+import ir.maktab.entities.db2.Article;
+import ir.maktab.entities.db2.Category;
+import ir.maktab.entities.db2.Tag;
 import ir.maktab.features.articlemanagement.usecase.EnterNewArticle;
-import ir.maktab.repositories.db1.ArticleRepository;
-import ir.maktab.repositories.db1.CategoryRepository;
-import ir.maktab.repositories.db1.TagRepository;
+import ir.maktab.repositories.db2.ArticleRepository;
+import ir.maktab.repositories.db2.CategoryRepository;
+import ir.maktab.repositories.db2.TagRepository;
+import ir.maktab.share.UserInfo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,11 +25,11 @@ public class EnterNewArticleImpl implements EnterNewArticle {
     static TagRepository tagRepository = TagRepository.getInstance();
 
     @Override
-    public void createArticle(User user) {
+    public void createArticle(UserInfo userInfo) {
         Scanner scanner = new Scanner(System.in);
         Article article = new Article();
         article.setId(null);
-        article.setUser(user);
+        article.setAuthor(userInfo.getFullName());
         System.out.println("Enter title : ");
         String title = scanner.next();
         System.out.println("Enter brief : ");
@@ -42,7 +44,7 @@ public class EnterNewArticleImpl implements EnterNewArticle {
         String publishDate = scanner.next();
         Date date = new Date(createDate,new java.util.Date().toString(),publishDate);
         article.setDate(date);
-        if (user.getRoles().size()==1){
+        if (userInfo.getRoleType().equals(RoleType.Writer)){
             article.setIsPublished(IsPublished.No);
         }else {
             System.out.println("Enter publishing condition : (yes or no)");

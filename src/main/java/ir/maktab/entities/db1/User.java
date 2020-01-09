@@ -1,6 +1,7 @@
 package ir.maktab.entities.db1;
 
 
+import ir.maktab.share.UserInfo;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -34,12 +35,8 @@ public class User {
     @Column
     private String password;
 
-    @OneToMany(mappedBy = "user")
-    private List<Article> articleList = new ArrayList<>();
-
     @OneToOne(mappedBy = "user" , cascade = CascadeType.ALL)
     private Address address;
-
 
     @ManyToMany
     @JoinTable(name = "user_role" , joinColumns = {@JoinColumn(name = "user_id")} , inverseJoinColumns = {@JoinColumn(name = "role_id")})
