@@ -40,7 +40,7 @@ public class Application {
         while ( ! manner.equals("exit")){
             System.out.println("Signin\nSignup\nArticles\n(Find1)...Find an optional city users" +
                     "(using a generic method with a Predicate argument)\n" +
-                    "(Find2)...See published articles...(using a generic method)Exit\n");
+                    "(Find2)...See published articles...(using a generic method)\nExit\n");
             manner = scanner.next();
             if (manner.equalsIgnoreCase("signup")){
 
@@ -315,7 +315,7 @@ public class Application {
             }
             if (command==12){
                 Dashboard dashboard = new DashboardImpl();
-                dashboard.dashboard(userInfo);
+                dashboard.dashboard(userInfo,RoleType.AdminWriter);
             }
 
             if (command==13){
@@ -329,10 +329,10 @@ public class Application {
 
         Scanner scanner = new Scanner(System.in);
         int command = 0;
-        while(command!=9) {
+        while(command!=10) {
             System.out.println("You signed in as an admin...choose an action");
             System.out.println("1.See all articles\n2.Publish an article\n3.Publish off an article\n4.Remove an article\n" +
-                    "5.Create a category\n6.Create a tag\n7.Change the role of users\n8.Change password\n9.exit");
+                    "5.Create a category\n6.Create a tag\n7.Change the role of users\n8.Change password\n9.Dashboard\n10.exit");
             command = scanner.nextInt();
             if (command==1){
                 articleRepository.findAll().stream().
@@ -412,6 +412,10 @@ public class Application {
                 changePassword.changePass(user);
             }
             if (command==9){
+                Dashboard dashboard = new DashboardImpl();
+                dashboard.dashboard(userInfo,RoleType.Admin);
+            }
+            if (command==10){
                 AuthenticationService.getInstance().setLoginUser(null);
                 System.out.println("signing out...Back to main menu...");
             }
@@ -452,7 +456,7 @@ public class Application {
 
             if (command == 5){
                 Dashboard dashboard = new DashboardImpl();
-                dashboard.dashboard(userInfo);
+                dashboard.dashboard(userInfo,RoleType.Writer);
             }
             if (command == 6){
                 AuthenticationService.getInstance().setLoginUser(null);

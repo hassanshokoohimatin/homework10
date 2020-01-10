@@ -7,9 +7,11 @@ import ir.maktab.entities.db1.enums.RoleType;
 import ir.maktab.entities.db2.Category;
 import ir.maktab.repositories.db1.*;
 import ir.maktab.repositories.db2.*;
+import ir.maktab.share.UserInfo;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class CreateRolesAndUser {
@@ -21,7 +23,7 @@ public class CreateRolesAndUser {
 
     public static void main(String[] args) {
 
-//        Function<User , UserInfo> function = user->userInfoRepository.findById(user.getId());
+
 //
 //        Role role1 = new Role(null, RoleType.Admin);
 //        Role role2 = new Role(null,RoleType.Writer);

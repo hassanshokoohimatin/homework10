@@ -2,60 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b79fbd1-2228-4cbe-bf5d-a45605ce4067" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/entities/db2/Article.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/entities/db2/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/entities/db2/Tag.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/repositories/db2/ArticleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/repositories/db2/CategoryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/repositories/db2/TagRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/share/UserInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework10.iml" beforeDir="false" afterPath="$PROJECT_DIR$/homework10.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/CreateRolesAndUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/CreateRolesAndUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/config/CrudRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/config/CrudRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/entities/db1/Article.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/entities/db1/Category.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/entities/db1/Tag.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/entities/db1/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/entities/db1/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/entities/db2/UserInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/impl/EditArticleImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/impl/EditArticleImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/impl/EnterNewArticleImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/impl/EnterNewArticleImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/impl/SeeArticlesByUserIdImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/impl/SeeArticlesByUserIdImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecase/EditArticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecase/EditArticle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecase/EnterNewArticle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecase/EnterNewArticle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecase/SeeArticlesByUserId.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/articlemanagement/usecase/SeeArticlesByUserId.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/features/usermanagement/impl/DashboardImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/usermanagement/impl/DashboardImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/features/usermanagement/usecase/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/usermanagement/usecase/Dashboard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/repositories/db1/ArticleRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/repositories/db1/CategoryRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/repositories/db1/TagRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/repositories/db2/UserInfoRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernatedb1.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernatedb1.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernatedb2.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernatedb2.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hibernatedb1.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernatedb1.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hibernatedb2.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernatedb2.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ir/maktab/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ir/maktab/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ir/maktab/CreateRolesAndUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ir/maktab/CreateRolesAndUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ir/maktab/config/CrudRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ir/maktab/config/CrudRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ir/maktab/entities/db1/Article.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ir/maktab/entities/db1/Category.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ir/maktab/entities/db1/Tag.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ir/maktab/entities/db1/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ir/maktab/entities/db1/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ir/maktab/entities/db2/UserInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ir/maktab/features/articlemanagement/impl/EditArticleImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ir/maktab/features/articlemanagement/impl/EditArticleImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ir/maktab/features/articlemanagement/impl/EnterNewArticleImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ir/maktab/features/articlemanagement/impl/EnterNewArticleImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ir/maktab/features/articlemanagement/impl/SeeArticlesByUserIdImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ir/maktab/features/articlemanagement/impl/SeeArticlesByUserIdImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ir/maktab/features/articlemanagement/usecase/EditArticle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ir/maktab/features/articlemanagement/usecase/EditArticle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ir/maktab/features/articlemanagement/usecase/EnterNewArticle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ir/maktab/features/articlemanagement/usecase/EnterNewArticle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ir/maktab/features/articlemanagement/usecase/SeeArticlesByUserId.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ir/maktab/features/articlemanagement/usecase/SeeArticlesByUserId.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ir/maktab/features/usermanagement/impl/DashboardImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ir/maktab/features/usermanagement/impl/DashboardImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ir/maktab/features/usermanagement/usecase/Dashboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ir/maktab/features/usermanagement/usecase/Dashboard.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ir/maktab/repositories/db1/ArticleRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ir/maktab/repositories/db1/CategoryRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ir/maktab/repositories/db1/TagRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ir/maktab/repositories/db2/UserInfoRepository.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -221,7 +172,8 @@
       <workItem from="1578549588589" duration="1019000" />
       <workItem from="1578555702090" duration="434000" />
       <workItem from="1578567675609" duration="3553000" />
-      <workItem from="1578587091421" duration="10990000" />
+      <workItem from="1578587091421" duration="11814000" />
+      <workItem from="1578673975230" duration="2486000" />
     </task>
     <servers />
   </component>
