@@ -5,7 +5,7 @@ import ir.maktab.config.HibernateUtil;
 import ir.maktab.entities.db1.Role;
 import org.hibernate.Session;
 
-public class RoleRepository extends CrudRepository<Role, Long> {
+public class RoleRepository extends CrudRepository<Role , Long> {
 
     private static RoleRepository roleRepository;
     private RoleRepository(){}

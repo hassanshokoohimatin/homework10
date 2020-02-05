@@ -11,6 +11,7 @@ import java.util.function.Predicate;
 
 public abstract class CrudRepository<Entity , ID extends Serializable> {
 
+
     protected abstract Class<Entity> getEntityClass();
     protected abstract Session getSession();
 

@@ -2,11 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b79fbd1-2228-4cbe-bf5d-a45605ce4067" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/ir/maktab/config/TestHibernateUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ir/maktab/repositories/db1/UserRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/hibernate.test.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/CreateRolesAndUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/CreateRolesAndUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/features/usermanagement/impl/DashboardImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/usermanagement/impl/DashboardImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/features/usermanagement/usecase/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/features/usermanagement/usecase/Dashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework10.iml" beforeDir="false" afterPath="$PROJECT_DIR$/homework10.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/config/CrudRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/config/CrudRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/repositories/db1/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/repositories/db1/RoleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/repositories/db1/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/repositories/db1/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/repositories/db2/ArticleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/repositories/db2/ArticleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/repositories/db2/CategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/repositories/db2/CategoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/maktab/repositories/db2/TagRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/maktab/repositories/db2/TagRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/homework10.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ir/maktab/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ir/maktab/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ir/maktab/config/CrudRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ir/maktab/config/CrudRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ir/maktab/features/usermanagement/impl/DashboardImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ir/maktab/features/usermanagement/impl/DashboardImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ir/maktab/repositories/db2/TagRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ir/maktab/repositories/db2/TagRepository.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,38 +38,7 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="homework10dbone@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="homework10dbone@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="homework10dbone@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="homework10dbone: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="homework10dbtwo@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="homework10dbtwo@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="homework10dbtwo@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="homework10dbtwo: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -65,6 +47,7 @@
         <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -81,14 +64,31 @@
   <component name="ProjectId" id="1W7OGsM6SfWbqPpgMTaO7Z3eaMV" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DatabaseDriversLRU" value="h2&#10;mysql" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="ir.maktab.config.CrudRepository" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../hw11poi" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="ir.maktab.repositories.db1" />
+      <recent name="ir.maktab.repositories.db2" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="ir.maktab.config.CrudRepository" />
+      <recent name="" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="ir.maktab.config" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -102,7 +102,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Application">
+  <component name="RunManager" selected="JUnit.UserRepositoryTest">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ir.maktab.Application" />
       <module name="homework10" />
@@ -129,9 +129,58 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestEntityRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework10" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ir.maktab.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ir.maktab" />
+      <option name="MAIN_CLASS_NAME" value="ir.maktab.TestEntityRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework10" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ir.maktab.repositories.db1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ir.maktab.repositories.db1" />
+      <option name="MAIN_CLASS_NAME" value="ir.maktab.repositories.db1.UserRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserRepositoryTest.testSave" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework10" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ir.maktab.repositories.db1.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ir.maktab.repositories.db1" />
+      <option name="MAIN_CLASS_NAME" value="ir.maktab.repositories.db1.UserRepositoryTest" />
+      <option name="METHOD_NAME" value="testSave" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserRepositoryTest" />
+        <item itemvalue="JUnit.UserRepositoryTest.testSave" />
         <item itemvalue="Application.Application" />
+        <item itemvalue="JUnit.TestEntityRepositoryTest" />
         <item itemvalue="Application.CreateRolesAndUser" />
       </list>
     </recent_temporary>
@@ -140,16 +189,7 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@bfafd33e" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@371df15" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-          </expand>
+          <expand />
           <select />
         </treeState>
       </serviceView>
@@ -173,7 +213,21 @@
       <workItem from="1578555702090" duration="434000" />
       <workItem from="1578567675609" duration="3553000" />
       <workItem from="1578587091421" duration="11814000" />
-      <workItem from="1578673975230" duration="2486000" />
+      <workItem from="1578673975230" duration="2741000" />
+      <workItem from="1579174758081" duration="31000" />
+      <workItem from="1579385985612" duration="3269000" />
+      <workItem from="1579562242809" duration="70000" />
+      <workItem from="1579562891873" duration="630000" />
+      <workItem from="1579626451342" duration="597000" />
+      <workItem from="1579896516879" duration="352000" />
+      <workItem from="1579990532229" duration="2359000" />
+      <workItem from="1580771534243" duration="6757000" />
+      <workItem from="1580800362465" duration="6053000" />
+      <workItem from="1580811932433" duration="1651000" />
+      <workItem from="1580855429970" duration="5459000" />
+      <workItem from="1580884359882" duration="926000" />
+      <workItem from="1580893944316" duration="595000" />
+      <workItem from="1580899400713" duration="954000" />
     </task>
     <servers />
   </component>

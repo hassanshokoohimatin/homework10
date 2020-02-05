@@ -5,7 +5,7 @@ import ir.maktab.config.HibernateUtil;
 import ir.maktab.entities.db1.User;
 import org.hibernate.Session;
 
-public class UserRepository extends CrudRepository<User, Long> {
+public class UserRepository extends CrudRepository<User , Long> {
 
     private static UserRepository userRepository;
     private UserRepository(){}
@@ -22,4 +22,6 @@ public class UserRepository extends CrudRepository<User, Long> {
     protected Session getSession() {
         return HibernateUtil.getSessionOne();
     }
+
+
 }

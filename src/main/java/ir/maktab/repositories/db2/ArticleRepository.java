@@ -5,7 +5,7 @@ import ir.maktab.config.HibernateUtil;
 import ir.maktab.entities.db2.Article;
 import org.hibernate.Session;
 
-public class ArticleRepository extends CrudRepository<Article, Long> {
+public class ArticleRepository extends CrudRepository<Article , Long> {
 
     private static ArticleRepository articleRepository;
     private ArticleRepository(){}

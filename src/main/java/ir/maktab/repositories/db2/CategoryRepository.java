@@ -5,7 +5,7 @@ import ir.maktab.config.HibernateUtil;
 import ir.maktab.entities.db2.Category;
 import org.hibernate.Session;
 
-public class CategoryRepository extends CrudRepository<Category, Long> {
+public class CategoryRepository extends CrudRepository<Category , Long> {
 
     private static CategoryRepository categoryRepository;
     private CategoryRepository(){}

@@ -5,7 +5,7 @@ import ir.maktab.config.HibernateUtil;
 import ir.maktab.entities.db2.Tag;
 import org.hibernate.Session;
 
-public class TagRepository extends CrudRepository<Tag, Long> {
+public class TagRepository extends CrudRepository<Tag , Long> {
 
     private static TagRepository tagRepository;
     private TagRepository(){}
@@ -21,4 +21,9 @@ public class TagRepository extends CrudRepository<Tag, Long> {
         return Tag.class;
     }
     protected Session getSession() { return HibernateUtil.getSessionTwo(); }
+
+    @Override
+    public void save(Tag tag) {
+        super.save(tag);
+    }
 }
